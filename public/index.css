@@ -593,6 +593,11 @@ video {
   }
 }
 
+.filter {
+  -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+          filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -607,4 +612,36 @@ code {
     monospace;
 }
 
+.wrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: pink;
+  width: 40%;
+}
+
+.heading {
+  background-color: aqua;
+}
+
+.addedlists {
+  background-color: beige;
+}
+
+.addtodo {
+  background-color: aquamarine;
+}
+
+.active {
+  display: block;
+}
+
+.passive {
+  display: none;
+}
