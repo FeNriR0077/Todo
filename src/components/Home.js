@@ -57,7 +57,7 @@ const Home = () => {
                 <div className="addedlists pt-5">
                     <div className={`todoinput text-3xl mb-8 ${!isTrue ? "active" : "passive"} `}>
                         <input value={inputval} onChange={e => setInputval(e.target.value)} type="text" placeholder="T O D O ' s" />
-                        <button className="ml-2" type="button" onClick={handleAdd}><i class="fa-solid fa-plus"></i> ADD</button>
+                        <button className="ml-2 text-red-500" type="button" onClick={handleAdd}><i class="fa-solid fa-plus"></i> ADD</button>
                     </div>
                 <ul className="orderoflists">
                     
@@ -69,8 +69,8 @@ const Home = () => {
                 </div>
 
                 <div className="addtodo">
-                    <button className={`plus text-red-500 font-semibold ${isTrue ? "active" : "passive"} `} type="button" onClick={handleAddBtn}><i class="fa-solid fa-plus"></i> ADD</button>
-                    <button className={`plus text-green-500 font-semibold ${!isTrue ? "active" : "passive"} `} type="button" onClick={handleAddBtn}> <i class="fa-solid fa-check"></i> Done </button>
+                    <button className={`plus border-2 border-red-400 rounded-lg p-1 text-red-500 font-semibold ${isTrue ? "active" : "passive"} `} type="button" onClick={handleAddBtn}><i class="fa-solid fa-plus"></i> ADD</button>
+                    <button className={`plus border-2 border-green-500 rounded-lg p-1 text-green-500 font-semibold ${!isTrue ? "active" : "passive"} `} type="button" onClick={handleAddBtn}> <i class="fa-solid fa-check"></i> Done </button>
                 </div>
             </div>
             

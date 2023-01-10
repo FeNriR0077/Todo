@@ -593,6 +593,86 @@ video {
   }
 }
 
+.m-8 {
+  margin: 2rem;
+}
+
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-red-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(248 113 113 / var(--tw-border-opacity));
+}
+
+.border-green-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(34 197 94 / var(--tw-border-opacity));
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
 .filter {
   -webkit-filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
           filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -612,30 +692,106 @@ code {
     monospace;
 }
 
+body {
+  background-image: url(./bgimg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .wrapper {
-  margin-top: 2rem;
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
 .container {
   display: flex;
+  margin: 2rem;
   flex-direction: column;
-  align-items: center;
-  background-color: pink;
+  background-color: #99f6e3d5;
   width: 40%;
+  border-radius: .7em;
 }
 
 .heading {
-  background-color: aqua;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.todoinput {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.todoinput input {
+  background-color: rgba(255, 255, 255, 0.582);
+  border-radius: 0.3rem;
+  padding: .4rem;
+}
+
+.todoinput input:focus{
+  background-color: whitesmoke;
+  outline-color: rgb(177, 252, 252);
+  outline-style: groove;
+  padding: .5rem;
+}
+
+.todoinput button {
+  border: 2px solid #ef4444;
+  margin-left: .2em;
+  padding: .4rem;
+  border-radius: .3em;
+}
+
+.todoinput button:hover {
+  background-color: #f87171;
 }
 
 .addedlists {
-  background-color: beige;
+  background-color: rgba(222, 60, 255, 0.123);
+  text-align: left;
+  padding: 1em;
+  font-size: 1.3em;
+}
+
+.todolists {
+  margin: .5em;
+}
+
+.todoinfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todoinfo span:nth-child(0) {
+  flex-basis: 5%;
+}
+
+.todoinfo input {
+  flex-basis: 5%;
+  width: 70%;
+  cursor: pointer;
+}
+
+.todoinfo .listitem {
+  flex-basis: 60%;
+}
+
+.todoinfo i:hover {
+  cursor: pointer;
+  color: rgb(211, 18, 18);
 }
 
 .addtodo {
-  background-color: aquamarine;
+  align-self: center;
+  margin: 1rem;
+  font-size: 2em;
+}
+
+.todocompletion {
+  text-align: center;
+  font-size: 0.8em;
+  color: rgb(43, 105, 146);
 }
 
 .active {
