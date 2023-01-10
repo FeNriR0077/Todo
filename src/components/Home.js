@@ -4,10 +4,11 @@ import Todo from "./Todo";
 
 const Home = () => {
 
-    const [list, setList] = useState(['Create Mini Project', 'Hello2', 'Hello3'])
+    const [list, setList] = useState(['Create Mini Project', 'Go Shopping', 'Clear some bills'])
     const [isTrue, setTrue] = useState(true)
-    const [isTrue2, setTrue2] = useState(true)
     const [inputval, setInputval] = useState('')
+    
+
 
     const handleAddBtn = () => {
         setTrue(!isTrue)
@@ -33,40 +34,43 @@ const Home = () => {
     const handleDelete = (li) => {
 
         let i = list.indexOf(li)
+        let sure = window.confirm('Are you sure?')
 
-        let list2 = list.filter( (value, index) => index !== i)
-        setList(list2)
-        console.log(list2)
-        console.log(list)
+        if (sure) {
+            let list2 = list.filter( (value, index) => index !== i)
+            setList(list2)
+            console.log(list)
+        }
+        
         
     };
 
-    const handleChange = (li) => {
-
-        setTrue2(!isTrue2)
-        
-    };
+    
 
 
     return (
         <div className='wrapper'>
-            <div className="container">
-                <h1 className="heading">
+            <div className="container m-8" >
+                <h1 className="heading text-6xl font-bold uppercase text-indigo-600 my-6">
                     To Do Lists
                 </h1>
-                <div className="addedlists">
-                    <div className={`todoinput ${!isTrue ? "active" : "passive"} `}>
+                <div className="addedlists pt-5">
+                    <div className={`todoinput text-3xl mb-8 ${!isTrue ? "active" : "passive"} `}>
                         <input value={inputval} onChange={e => setInputval(e.target.value)} type="text" placeholder="T O D O ' s" />
-                        <button type="button" onClick={handleAdd}>+ ADD</button>
+                        <button className="ml-2" type="button" onClick={handleAdd}><i class="fa-solid fa-plus"></i> ADD</button>
                     </div>
-
-                <Todo list={list} handleDelete={handleDelete} handleChange={handleChange} isTrue2={isTrue2} />
-
+                <ul className="orderoflists">
+                    
+                    {list.map((item,index) => (
+                        <Todo list={item} handleDelete={handleDelete} index={index}  />
+                    ))}
+                    
+                </ul>
                 </div>
 
                 <div className="addtodo">
-                    <button className={`plus ${isTrue ? "active" : "passive"} `} type="button" onClick={handleAddBtn}>+ ADD TODO'S</button>
-                    <button className={`plus ${!isTrue ? "active" : "passive"} `} type="button" onClick={handleAddBtn}>- Close TODO's</button>
+                    <button className={`plus text-red-500 font-semibold ${isTrue ? "active" : "passive"} `} type="button" onClick={handleAddBtn}><i class="fa-solid fa-plus"></i> ADD</button>
+                    <button className={`plus text-green-500 font-semibold ${!isTrue ? "active" : "passive"} `} type="button" onClick={handleAddBtn}> <i class="fa-solid fa-check"></i> Done </button>
                 </div>
             </div>
             

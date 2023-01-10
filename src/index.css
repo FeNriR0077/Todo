@@ -10,6 +10,7 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+
 }
 
 code {
@@ -17,30 +18,105 @@ code {
     monospace;
 }
 
+body {
+  background-image: url(./bgimg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .wrapper {
-  margin-top: 2rem;
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 
 .container {
   display: flex;
+  margin: 2rem;
   flex-direction: column;
-  align-items: center;
-  background-color: pink;
+  background-color: #99f6e3d5;
   width: 40%;
+  border-radius: .7em;
 }
 
 .heading {
-  background-color: aqua;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.todoinput {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.todoinput input {
+  background-color: rgba(255, 255, 255, 0.582);
+  border-radius: 0.3rem;
+  padding: .4rem;
+}
+.todoinput input:focus{
+  background-color: whitesmoke;
+  outline-color: rgb(177, 252, 252);
+  outline-style: groove;
+  padding: .5rem;
+}
+
+.todoinput button {
+  border: 2px solid #ef4444;
+  margin-left: .2em;
+  padding: .4rem;
+  border-radius: .3em;
+}
+
+.todoinput button:hover {
+  background-color: #f87171;
 }
 
 .addedlists {
-  background-color: beige;
+  background-color: rgba(222, 60, 255, 0.123);
+  text-align: left;
+  padding: 1em;
+  font-size: 1.3em;
+}
+
+.todolists {
+  margin: .5em;
+}
+
+.todoinfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todoinfo span:nth-child(0) {
+  flex-basis: 5%;
+}
+
+.todoinfo input {
+  flex-basis: 5%;
+  width: 70%;
+  cursor: pointer;
+}
+
+.todoinfo .listitem {
+  flex-basis: 60%;
+}
+
+.todoinfo i:hover {
+  cursor: pointer;
+  color: rgb(211, 18, 18);
 }
 
 .addtodo {
-  background-color: aquamarine;
+  align-self: center;
+  margin: 1rem;
+  font-size: 2em;
+}
+
+.todocompletion {
+  text-align: center;
+  font-size: 0.8em;
+  color: rgb(43, 105, 146);
 }
 
 .active {
