@@ -28,7 +28,7 @@ body {
 .wrapper {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
@@ -47,7 +47,7 @@ body {
 
 .todoinput {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .todoinput input {
@@ -89,16 +89,20 @@ body {
 .todoinfo {
   display: flex;
   justify-content: space-between;
+  gap: 1em;
 }
 
 .todoinfo span:nth-child(0) {
   flex-basis: 5%;
+
 }
 
 .todoinfo input {
   flex-basis: 5%;
-  width: 70%;
+  /* width: 70%; */
   cursor: pointer;
+  min-width: 1.3rem;
+  justify-self: center;
 }
 
 .todoinfo .listitem {
@@ -141,4 +145,30 @@ i:hover {
   border-radius: .7em;
   background-color: #ffaeaece;
   /* background-color: rgba(148, 163, 184, 0.712); */
+}
+
+
+
+@media only screen and (max-width: 1260px) {
+
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3em;
+  }
+
+  .notescontainer {
+    width: 80%;
+    margin: auto;
+  }
+
+
+
+
+
 }

@@ -93,9 +93,9 @@ const Home = () => {
                     To Do Lists
                 </h1>
                 <div className="addedlists pt-5 border-teal-600">
-                    <div className={`todoinput text-3xl mb-8 ${!isTrue ? "active" : "passive"} `}>
+                    <div className={`todoinput text-2xl mb-8 ${!isTrue ? "active" : "passive"} `}>
                         <input className="text-2xl" value={inputval} onChange={e => setInputval(e.target.value)} type="text" placeholder="T O D O ' s" />
-                        <button className="ml-2 transition ease-in delay-75 text-red-500" type="button" onClick={handleAdd}><i class="fa-solid fa-plus"></i> ADD</button>
+                        <button className="ml-2 transition ease-in delay-75 text-red-500 text-xl" type="button" onClick={handleAdd}><i class="fa-solid fa-plus"></i> ADD</button>
                     </div>
                     <ul className="orderoflists">
                         
@@ -119,11 +119,11 @@ const Home = () => {
                 
                 <div className="notesitems bg-white/50">
                         
-                    <div className={`todoinput text-3xl mb-8 p-5 ${!isTrueNotes ? "active" : "passive"} `}>
+                    <div className={`todoinput text-2xl p-5 ${!isTrueNotes ? "active" : "passive"} `}>
                         <input className="text-2xl" value={inputvalnotes} onChange={e => setInputvalNotes(e.target.value)} type="text" placeholder="N O T E ' S" />
-                        <button className="ml-2 transition ease-in delay-75 text-red-500" type="button" onClick={handleAddNotes}><i class="fa-solid fa-plus"></i> ADD</button>
+                        <button className="ml-2 transition ease-in delay-75 text-red-500 text-xl" type="button" onClick={handleAddNotes}><i class="fa-solid fa-plus"></i> ADD</button>
                     </div>
-                    <ul className="orderofnotes mb-0.5">
+                    <ul className="orderofnotes mb-0.8">
                         {notes.map((note, index) => (
                             <Notes note={note} index={index} handleDeleteNotes={handleDeleteNotes} />
                         ))}
