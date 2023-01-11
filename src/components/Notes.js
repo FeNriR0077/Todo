@@ -11,6 +11,7 @@ const Notes = ({note, index, handleDeleteNotes}) => {
             </li>
         </>
     );
+
 }
  
 export default Notes;
