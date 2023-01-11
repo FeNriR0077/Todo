@@ -53,6 +53,7 @@ body {
 .todoinput input {
   background-color: rgba(255, 255, 255, 0.582);
   border-radius: 0.3rem;
+  width: 70%;
   padding: .4rem;
 }
 .todoinput input:focus{
@@ -167,8 +168,10 @@ i:hover {
     margin: auto;
   }
 
-
-
+  .todoinput input {
+    width: 70%;
+  }
 
 
 }
+
